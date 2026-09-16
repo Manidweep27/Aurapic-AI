@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-green: #404E3B;
+  --color-jade-green: #7B9669;
+  --color-muted-teal: #6C8480;
+  --color-soft-green: #BAC8B1;
+  --color-light-gray: #E6E6E6;
+  --color-white: #FFFFFF;
+
+  --color-brand-dark: #404E3B;
+  --color-brand-jade: #7B9669;
+  --color-brand-teal: #6C8480;
+  --color-brand-soft: #BAC8B1;
+  --color-brand-gray: #E6E6E6;
+
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  color: #404E3B;
+  background-color: #E6E6E6;
+}
+
+/* Custom laser scanning animation */
+@keyframes aiScanLaser {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.animate-scan-laser {
+  animation: aiScanLaser 2.4s ease-in-out infinite;
+}
+
+@keyframes pulseBorder {
+  0%, 100% {
+    border-color: rgba(123, 150, 105, 0.4);
+    box-shadow: 0 0 10px rgba(123, 150, 105, 0.2);
+  }
+  50% {
+    border-color: rgba(123, 150, 105, 0.95);
+    box-shadow: 0 0 20px rgba(123, 150, 105, 0.45);
+  }
+}
+
+.animate-pulse-border {
+  animation: pulseBorder 2s infinite ease-in-out;
+}
+
+/* Custom scrollbar matching the palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E6E6E6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BAC8B1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7B9669;
+}
+
+/* Elegant glass card */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(186, 200, 177, 0.4);
+}
+
+.glass-dark {
+  background: rgba(64, 78, 59, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(123, 150, 105, 0.25);
+}
